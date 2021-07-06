@@ -1,17 +1,15 @@
 package introducao;
 
-import java.util.Locale;
+import java.util.Scanner;
 
-public class ExenploScanner {
-
+public class ExemploScanner{
 	public static void main(String[] args) {
+		Scanner leia = new Scanner(System.in);
 		
-		Locale.setDefault(Locale.US);
+		int nome;
 		
-		Scanner leia = new Scanner (System.in);
-		
-		
+		System.out.println("Digite um nome: ");
+		nome = leia.nextInt();	
 
 	}
-
 }
