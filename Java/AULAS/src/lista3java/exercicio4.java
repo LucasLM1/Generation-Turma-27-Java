@@ -1,65 +1,76 @@
 package lista3java;
 
-import java.io.PrintStream;
-import java.util.Scanner; 
+import java.util.Scanner;
 
 public class exercicio4 {
 
 	public static void main(String[] args) {
-		
+	
 		Scanner leia = new Scanner(System.in);
 		
-		int idade = 0;
-		char sexo;
-		char option;
-		int pesscalm = 0;
-		int mulbrava = 0;
-		int hombrav = 0;
-		int outcalm = 0;
-		int pessnervmais40 = 0;
-		int pesscalm18 = 0;
-		char op='5';
-		final int limite = 150;
-		int ctd = 1;
+		int idade=0;
+		char sexo; //(1-feminino / 2-masculino / 3-Outros)
+		char opcao; // (1, se a pessoa era calma; 2, se a pessoa era nervosa e 3, se a pessoa era agressiva)
+		int pessCalm = 0;
+		int mulNerv = 0;
+		int homemAgr = 0;
+		int outCalm = 0; 
+		int pessNervMais40 = 0;
+		int pessCalm18 = 0;
+		char op='S';
+		final int LIMITE = 150;
+		int contador=1;
+		String nome;
 		
-		while(op == '5' && ctd <= limite){
-			System.out.printf("Participante", ctd);
-			ctd = leia.next().charAt(0);
-			System.out.println("Digite a idade; ");
-			idade = leia.next().charAt(0); 
-			System.out.println("1- pessoa calma\n2-pessoa nervosa\n3-pessoa agressiva");
+		while ( op=='S' && contador <= LIMITE) {
+			System.out.println("Participante "+contador);
+			System.out.print("Digite a idade: ");
+			idade = leia.nextInt();
+			System.out.println("Digite");
+			System.out.print("1-feminino\n2-masculino\n3-Outros : ");
 			sexo = leia.next().charAt(0);
-			System.out.println("\n1- Feminino\n2-Masculino\n3-Outros");
-			option= leia.next().charAt(0);
+			System.out.println("Selecione ");
+			System.out.print("1 - pessoa calma\n2 - pessoa nervosa\n3 - pessoa agressiva : ");
+			opcao = leia.next().charAt(0);
 			
-			if(option==1) {
-				pesscalm++;
+			if (opcao =='1') {
+				pessCalm++;
 			}
-			if(sexo=='1' && option== '2' );{
-				mulbrava++;
+			
+			if (sexo=='1' && opcao =='2') {
+				mulNerv++;
 			}
-			if(sexo=='2' && option== '3' ) {
-				hombrav++;
+			
+			if (sexo=='2' && opcao =='3') {
+				homemAgr++;
 			}
-			if(sexo=='3' && option=='1' ) {
-				outcalm++;
+			
+			if (sexo =='3' && opcao =='1') {
+				outCalm++;
 			}
-			if(idade > 40 && option=='3' ) {
-				pessnervmais40++;
+			
+			if(idade>40 && opcao=='2') {
+				pessNervMais40++;
 			}
-			if(idade < 18 && option =='1' ) {
-				pesscalm18++;
+			
+			if (idade<18 && opcao=='1') {
+				pessCalm18++;
 			}
-			System.out.println("Continua S/N");
+			
+			System.out.println("Continua S/N:");
 			op = leia.next().toUpperCase().charAt(0);
-			ctd++;
+			//saida do loop
+			contador++;
+			
 		}
-		System.out.printf("Pessoas calmas", pesscalm, "\n");
-		System.out.printf("Mulheres Nervosas", mulbrava, "\n");
-		System.out.printf("Homens bravos", hombrav, "\n");
-		System.out.printf("outros calmos", outcalm, "\n");
-		System.out.printf("Pessoas nervosas com mais de 40 anos", pessnervmais40,"\n");
-		System.out.printf("Pessoas calmas com menos de 18", pesscalm18, "\n");
+		System.out.println("Pessoas calmas : "+pessCalm);
+		System.out.println("Mulheres nervorsas : "+mulNerv);
+		System.out.println("Homens agressivos : "+homemAgr);
+		System.out.println("Outros calmos : "+outCalm);
+		System.out.println("Pessoas nervosas mais de 40 anos :"+pessNervMais40);
+		System.out.println("Menos de 18 calmos :"+pessCalm18);
+
+		
 	}
 
 }
