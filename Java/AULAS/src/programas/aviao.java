@@ -20,12 +20,14 @@ public class aviao {
 		System.out.println("Velocimentro atual: "+aviao.velocidade+" no ar "+aviao.noar+" ligado "+aviao.ligado);
 		System.out.println("Indo pra pista");
 		aviao.ligar(); 
+		
 		aviao.aumentarVelocidade();
 		aviao.aumentarVelocidade();
 		aviao.aumentarVelocidade();
 		aviao.diminuirVelocidade();
 		aviao.diminuirVelocidade();
 		aviao.diminuirVelocidade();
+		
 		System.out.println("Velocimentro atual: "+aviao.velocidade+" no ar "+aviao.noar+" ligado "+aviao.ligado);
 		aviao.decolando();
 		aviao.aumentarVelocidade(40);
