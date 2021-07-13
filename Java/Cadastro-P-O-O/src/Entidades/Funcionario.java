@@ -3,8 +3,8 @@ package Entidades;
 public class Funcionario {
 	
 	private String matricula;
-	private int horastrabalhadas;
-	private double valorhora;
+	protected int horastrabalhadas;
+	protected double valorhora;
 	
 	public Funcionario(String matricula, int horastrabalhadas, double valorhora) {
 		super();

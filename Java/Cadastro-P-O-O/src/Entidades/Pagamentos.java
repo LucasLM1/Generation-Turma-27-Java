@@ -1,10 +1,10 @@
 package Entidades;
 
-public class Pagamentos {
+public interface Pagamentos {
 	
 	public double payextra();
 
-	public double paysalario();
+	public void paysalario();
 	
-	public double payhoras();
+	public void payhoras();
 }

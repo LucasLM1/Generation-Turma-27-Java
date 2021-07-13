@@ -1,6 +1,6 @@
 package Entidades;
 
-public class Terceiro extends Funcionario {
+public class Terceiro extends Funcionario implements Pagamentos{
 	
 	private double adicional;
 	
@@ -25,12 +25,27 @@ public class Terceiro extends Funcionario {
 			super(matricula);
 			this.adicional = adicional;
 		}
+		
 		@Override
 		public double salario() {
-			
-			
-			
+				
 			return (super.getHorastrabalhadas() * super.getValorhora()) + adicional;
 		}
-	
+		
+		// interface
+		@Override
+		public double payextra() {
+			
+			return horastrabalhadas * valorhora;
+		}
+
+		@Override
+		public void paysalario() {	
+			
+		}
+
+		@Override
+		public void payhoras() {
+			
+		}		
 }
